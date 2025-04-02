@@ -16,7 +16,7 @@
 - Nenhuma dependência externa necessária
 - Compatível com navegadores modernos (Chrome, Firefox, Edge, Safari)
 
-## 🛠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 | Categoria       | Tecnologias/Ferramentas                                                                 | Finalidade                                                                 |
 |-----------------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
@@ -27,7 +27,7 @@
 | **Performance** | Loader de carregamento, Otimização de assets                                           | Melhor experiência do usuário durante carregamentos                        |
 
 ---
-## 🌟 Recursos Implementados
+## Recursos Implementados
 
 - **Design moderno** com gradientes temáticos (verde/amarelo)
 - **Bordas animadas** no container do mapa
