@@ -1,5 +1,14 @@
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Corpo da página */
 body {
-    background: linear-gradient(135deg, #003300, #006400, #228B22);
+    background: linear-gradient(135deg, #e2f8e2, #e2fbff, #fbfdfc);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,10 +25,12 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 20% 30%, rgba(255, 236, 131, 0.1) 0%, transparent 20%),
         radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
     z-index: -1;
 }
+
+/* Cabeçalho */
 header {
     width: 100%;
     background: linear-gradient(135deg, #004d00, #006400);
@@ -48,7 +59,7 @@ header {
 .titles h1 {
     font-size: 28px;
     margin: 0;
-    color: #FFD700;
+    color: #FFFFFF;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -68,6 +79,8 @@ header {
     display: inline-block;
     margin-top: 5px;
 }
+
+/* Container do mapa */
 #map-container {
     flex-grow: 1;
     width: 95%;
@@ -108,48 +121,38 @@ header {
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-.floating-icons {
-    position: fixed;
-    top: 0;
-    left: 0;
+/* Iframe do mapa */
+iframe {
     width: 100%;
     height: 100%;
-    pointer-events: none;
-    z-index: -1;
+    border: none;
 }
 
-.icon {
+/* Botão de tela cheia */
+#fullscreen-btn {
     position: absolute;
-    opacity: 0.1;
-    background-size: contain;
-    background-repeat: no-repeat;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(165, 240, 253, 0.7);
+    color: rgb(26, 147, 245);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
-.leaf1, .leaf2, .leaf3 {
-    width: 100px;
-    height: 100px;
-    background-image: url('leaf-icon.png');
+#fullscreen-btn:hover {
+    background: rgba(165, 240, 253, 0.7);
+    transform: scale(1.1);
 }
 
-.tech1, .tech2 {
-    width: 80px;
-    height: 80px;
-    background-image: url('tech-icon.png');
-}
-
-/* Posições específicas para cada ícone */
-.leaf1 { top: 10%; left: 5%; animation: float 15s infinite ease-in-out; }
-.leaf2 { top: 70%; left: 80%; animation: float 18s infinite ease-in-out 2s; }
-.leaf3 { top: 30%; left: 90%; animation: float 12s infinite ease-in-out 1s; }
-.tech1 { top: 80%; left: 10%; animation: float 14s infinite ease-in-out 3s; }
-.tech2 { top: 20%; left: 70%; animation: float 16s infinite ease-in-out; }
-
-@keyframes float {
-    0% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
-    100% { transform: translateY(0) rotate(0deg); }
-}
-
+/* Rodapé */
 footer {
     width: 100%;
     padding: 15px 0;
@@ -185,7 +188,7 @@ footer {
 }
 
 .footer-links a {
-    color: #FFD700;
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 12px;
     transition: color 0.3s;
@@ -194,4 +197,80 @@ footer {
 .footer-links a:hover {
     color: white;
     text-decoration: underline;
+}
+
+/* Elementos decorativos */
+.floating-icons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.icon {
+    position: absolute;
+    opacity: 0.1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.leaf1, .leaf2, .leaf3 {
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/leaf-icon.png');
+}
+
+.tech1, .tech2 {
+    width: 80px;
+    height: 80px;
+    background-image: url('../img/tech-icon.png');
+}
+
+/* Posições específicas para cada ícone */
+.leaf1 { top: 10%; left: 5%; animation: float 15s infinite ease-in-out; }
+.leaf2 { top: 70%; left: 80%; animation: float 18s infinite ease-in-out 2s; }
+.leaf3 { top: 30%; left: 90%; animation: float 12s infinite ease-in-out 1s; }
+.tech1 { top: 80%; left: 10%; animation: float 14s infinite ease-in-out 3s; }
+.tech2 { top: 20%; left: 70%; animation: float 16s infinite ease-in-out; }
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Loader */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    text-align: center;
+    color: white;
+}
+
+.loader-circle {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 215, 0, 0.3);
+    border-top-color: #c7c1a3;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }

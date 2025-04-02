@@ -3,36 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Mapa - AB Soluções | Hulha Negra</title>
+    <title>Mapas NDVI</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="logo-actis.png" alt="ACTIS Logo" class="logo">
-            <div class="titles">
-                <h1>ACTIS</h1>
-                <h2>Geoprocessamento e Inteligência Territorial</h2>
-            </div>
-        </div>
-        <div class="subtitle">Mapa interativo do município de Hulha Negra</div>
-    </header>
 
-    <div class="floating-icons">
-        <div class="icon leaf1"></div>
-        <div class="icon leaf2"></div>
-        <div class="icon leaf3"></div>
-        <div class="icon tech1"></div>
-        <div class="icon tech2"></div>
+    <!-- PAGINA do mapa carregando  -->
+    <div id="loader" class="loader-container">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Carregando mapa...</p>
+        </div>
     </div>
 
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo-container">
+            <img src="images/logo_simagro.png" alt="Simagro Logo" class="logo">
+            <div class="titles">
+                <h1>Simagro-RS</h1>
+                <h2>Mapas</h2>
+            </div>
+        </div>
+        <!-- <div class="subtitle">NDVI</div> -->
+    </header>
+
+    <!-- Mapa incorporado do geonode -->
+    <div id="map-container">
+        <iframe src=""></iframe>
+        <button id="fullscreen-btn" title="Tela cheia">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Rodapé -->
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="logo-actis-small.png" alt="ACTIS">
+                <img src="images/brasão-RS.png" alt="ACTIS">
             </div>
             <div class="footer-info">
-                <p>&copy; 2025 ACTIS | Transformando dados em soluções estratégicas</p>
+                <p>&copy; SIMAGRO | </p>
                 <div class="footer-links">
                     <a href="#">Termos de Uso</a>
                     <a href="#">Política de Privacidade</a>
@@ -42,6 +55,16 @@
         </div>
     </footer>
 
+    <!-- Elementos decorativos -->
+    <div class="floating-icons">
+        <div class="icon leaf1"></div>
+        <div class="icon leaf2"></div>
+        <div class="icon leaf3"></div>
+        <div class="icon tech1"></div>
+        <div class="icon tech2"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
-
