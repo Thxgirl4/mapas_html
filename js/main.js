@@ -1,4 +1,4 @@
-// Loader - Esconder quando a página carregar
+// Loader -
 window.addEventListener('load', function() {
     document.getElementById('loader').style.display = 'none';
 });
@@ -15,7 +15,7 @@ document.getElementById('fullscreen-btn').addEventListener('click', function() {
     }
 });
 
-// Verificar carregamento do iframe (opcional)
+// Verificar carregamento do iframe 
 const mapIframe = document.querySelector('iframe');
 if (mapIframe) {
     mapIframe.addEventListener('load', function() {
@@ -23,7 +23,7 @@ if (mapIframe) {
     });
 }
 
-// Efeito de scroll suave para links (opcional)
+// Efeito de scroll 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
